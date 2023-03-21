@@ -1,20 +1,23 @@
-# Calculator
 import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
+
 class Calculator extends JFrame implements ActionListener {
+	
 	static JFrame f;
 	static JTextField l;
 	String s0, s1, s2;
+	
 	Calculator()
 	{
 		s0 = s1 = s2 = "";
 	}
+	
 	public static void main(String args[])
 	{
 		f = new JFrame("calculator");
 
-		try {
+	try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		}
 		catch (Exception e) {
