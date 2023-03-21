@@ -5,8 +5,8 @@ import javax.swing.*;
 import java.awt.*;
 
 class Calculator extends JFrame implements ActionListener {
-	
-	static JFrame f;
+
+        static JFrame f;
 	static JTextField l;
 	String s0, s1, s2;
 	
@@ -81,33 +81,33 @@ class Calculator extends JFrame implements ActionListener {
 			l.setText(s0 + s1 + s2);
 		}
 		else if (s.charAt(0) == '=') {
-			double te;
+			double m;
 			if (s1.equals("+"))
-				te = (Double.parseDouble(s0) + Double.parseDouble(s2));
+				m = (Double.parseDouble(s0) + Double.parseDouble(s2));
 			else if (s1.equals("-"))
-				te = (Double.parseDouble(s0) - Double.parseDouble(s2));
+				m = (Double.parseDouble(s0) - Double.parseDouble(s2));
 			else if (s1.equals("/"))
-				te = (Double.parseDouble(s0) / Double.parseDouble(s2));
+				m = (Double.parseDouble(s0) / Double.parseDouble(s2));
 			else
-				te = (Double.parseDouble(s0) * Double.parseDouble(s2));
-			l.setText(s0 + s1 + s2 + "=" + te);
-			s0 = Double.toString(te);
+				m = (Double.parseDouble(s0) * Double.parseDouble(s2));
+			l.setText(s0 + s1 + s2 + "=" + m);
+			s0 = Double.toString(m);
 			s1 = s2 = "";
 		}
 		else {
 			if (s1.equals("") || s2.equals(""))
 				s1 = s;
 			else {
-				double te;
+				double m;
 				if (s1.equals("+"))
-					te = (Double.parseDouble(s0) + Double.parseDouble(s2));
+					m = (Double.parseDouble(s0) + Double.parseDouble(s2));
 				else if (s1.equals("-"))
-					te = (Double.parseDouble(s0) - Double.parseDouble(s2));
+					m = (Double.parseDouble(s0) - Double.parseDouble(s2));
 				else if (s1.equals("/"))
-					te = (Double.parseDouble(s0) / Double.parseDouble(s2));
+					m = (Double.parseDouble(s0) / Double.parseDouble(s2));
 				else
-					te = (Double.parseDouble(s0) * Double.parseDouble(s2));
-				s0 = Double.toString(te);
+					m = (Double.parseDouble(s0) * Double.parseDouble(s2));
+				s0 = Double.toString(m);
 				s1 = s;
 				s2 = "";
 			}
